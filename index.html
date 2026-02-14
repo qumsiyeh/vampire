@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crimson Eclipse — Survivor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;800&family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="hud">
+        <div class="brand">
+          <h1>Crimson Eclipse</h1>
+          <p>Survive the night. Harvest the swarm.</p>
+        </div>
+        <div class="stats">
+          <div class="stat"><span>Time</span><strong id="time">0:00</strong></div>
+          <div class="stat"><span>Level</span><strong id="level">1</strong></div>
+          <div class="stat"><span>Kills</span><strong id="kills">0</strong></div>
+          <div class="stat"><span>HP</span><strong id="health">100</strong></div>
+        </div>
+      </header>
+
+      <main class="game-container">
+        <canvas id="game" width="1280" height="720" aria-label="Game area"></canvas>
+        <div id="overlay" class="overlay visible">
+          <h2>Nightfall Begins</h2>
+          <p>Move with <kbd>WASD</kbd> or <kbd>Arrow Keys</kbd>. Attacks auto-fire.</p>
+          <p>Collect blood orbs to level up and pick upgrades.</p>
+          <button id="startBtn">Start Hunt</button>
+        </div>
+        <div id="upgradePanel" class="overlay hidden"></div>
+      </main>
+    </div>
+
+    <script type="module" src="game.js"></script>
+  </body>
+</html>
